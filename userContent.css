@@ -1,0 +1,134 @@
+/* input  */
+
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=tel],
+input[type=url],
+input[type=password],
+input[type=date],
+input[type=datetime],
+input[type=time],
+input[type=datetime-local],
+input:not([type]),
+select[multiple] {
+    -moz-appearance: none;
+
+    border: 1px solid rgb(183, 183, 183);
+    border-top-color: rgb(166, 166, 166);
+    padding: 3px;
+    background-color: #FFF;
+    box-shadow: inset 0px 2px 1.5px -2px rgb(166, 166, 166);
+}
+
+input[type=text]:focus,
+input[type=search]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+input[type=date]:focus,
+input[type=datetime]:focus,
+input[type=time]:focus,
+input[type=datetime-local]:focus,
+input:not([type]):focus,
+select[multiple]:focus {
+    /* color from UI */
+    border-color: rgb(137, 145, 152);
+    border-radius: 1px;
+    box-shadow: 0px 0px 1px 2px rgb(141, 152, 163),
+                inset 0px 0px 1px 0px rgb(141, 152, 163),
+                inset 0px 3px 2px -3px rgb(166, 166, 166);
+}
+
+
+/* buttons */
+
+button,
+input[type=submit],
+input[type=reset],
+select:not([multiple]) {
+    -moz-appearance: none;
+
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 4px;
+    padding: 0px 6px;
+    box-shadow: 0px 1px 0px 0px rgb(240, 240, 240);
+
+    background: linear-gradient(to bottom,
+                                rgb(255, 255, 255) 0%,
+                                rgb(255, 255, 255) 20%,
+                                rgb(255, 255, 255) 20%,
+                                rgb(245, 245, 245) 50%,
+                                rgb(236, 236, 236) 50%,
+                                rgb(237, 237, 237) 80%,
+                                rgb(237, 237, 237) 80%,
+                                rgb(242, 242, 242) 100%);
+}
+
+button:focus,
+input[type=submit]:focus,
+input[type=reset]:focus,
+select:not([multiple]):focus {
+    /* color from UI */
+    border-color: rgb(124, 135, 146);
+    box-shadow: 0px 0px 1px 1px rgb(141, 152, 163),
+                inset 0px 0px 1px 1px rgb(141, 152, 163);
+    border-radius: 4px;
+}
+
+/* hides the dotted outline on focus in FF (See SO#3773430) */
+button:-moz-focusring,
+input[type=submit]:-moz-focusring,
+input[type=reset]:-moz-focusring,
+select:not([multiple]):-moz-focusring {
+    color: transparent !important;
+    text-shadow: 0 0 0 #000;
+    border 1px dotted transparent !important;
+}
+
+
+/* select */
+
+select:not([multiple]) {
+    -moz-appearance: none;
+
+    padding: 0px;
+    padding-right: 10px;
+
+    /* hide button */
+    text-indent: 2px; /* *2 for some reason */
+    text-overflow: "";
+
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAICAYAAAAvOAWIAAAAXUlEQVQYlbWOMQ3AMAwEXwEQTlYohEcAGIElw/HqzSSC5rt0Trr05n/dAS9rLeJCAwAz494bZnY8tMxkVaH3jqpCZl4NPxARFBGOMSgijIhzhrtzzkl3/9arqtfhA90wKnGlyhUhAAAAAElFTkSuQmCC') no-repeat right center,
+                linear-gradient(to bottom,
+                                rgb(255, 255, 255) 0%,
+                                rgb(255, 255, 255) 20%,
+                                rgb(255, 255, 255) 20%,
+                                rgb(245, 245, 245) 50%,
+                                rgb(236, 236, 236) 50%,
+                                rgb(237, 237, 237) 80%,
+                                rgb(237, 237, 237) 80%,
+                                rgb(242, 242, 242) 100%);
+}
+
+/* textarea */
+
+textarea {
+    -moz-appearance: none;
+
+    border: 1px solid rgb(153, 153, 153);
+    border-top-color: rgb(115, 115, 115);
+}
+
+textarea:focus {
+    /* color from UI */
+    border-radius: 1px;
+    box-shadow: 0px 0px 1.5px 2px rgb(141, 152, 163);
+}
+
+/* others */
+
+input[type=radio] { -moz-appearance: radio }
+input[type=checkbox] { -moz-appearance: checkbox }
+input[type=range] { -moz-appearance: range }
