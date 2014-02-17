@@ -1,0 +1,23 @@
+# lloeki's FxFiles
+
+A collection of files to make Firefox behave like it's 201x.
+
+## fix `moz-appearance: none`
+
+Ever put a custom border on a text field and have things go ugly? then you
+already met with `moz-appearance: none`;
+
+So this changes that:
+
+![before: ugly!](before.png)
+
+into this:
+
+![after: pretty!](after.png)
+
+in pure CSS, so without relying on the system rendering (which doesn't allow
+styles). No more timeshift to '95!
+
+And yes, focus works.
+
+Implementation only covers OS X (for now).
